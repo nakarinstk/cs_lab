@@ -24,9 +24,9 @@ public class Game {
 
     public void play() {
         Scanner inObj = new Scanner(System.in);
+        Random rand = new Random();
         while (Math.abs(usrScore - comScore) != 2) {
-            Random rand = new Random();
-            int comRand = rand.nextInt(4);
+            int comRand = rand.nextInt(3);
             System.out.println("\nEnter 0 for ROCK, 1 for PAPER, 2 for SCISSORS: ");
             if (inObj.hasNextInt()) {
                 usrNumber = inObj.nextInt();
@@ -44,6 +44,7 @@ public class Game {
                     } else { // usrer Lose
                         System.out.println("You lose!");
                         comScore += 1;
+                        continue;
                     }
                 } else { // Input is not Valid
                     continue;
