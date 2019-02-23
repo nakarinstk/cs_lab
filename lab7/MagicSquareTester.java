@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class MagicSquareTester {
 
     public static void main(String[] args) {
+        int dimSize;
         Scanner sc = new Scanner(System.in);
         while (true) {
             System.out.println("Please Enter Dimension Number :");

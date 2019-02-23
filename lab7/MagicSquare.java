@@ -36,7 +36,6 @@ public class MagicSquare {
                 j = 0;
             }
             if ((board[i][j] != 0)) {
-                System.out.println("next Box: " + board[i][j]);
                 j--;
                 i = i - 2;
             }
