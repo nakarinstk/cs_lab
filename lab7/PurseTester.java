@@ -20,14 +20,14 @@ public class PurseTester {
         // System.out.println(test1);
         // ----------
         // System.out.println(test1.reverse());
-        // ----------
+        // // ----------
         // test1.tranfer(test2);
         // System.out.println(test1);
         // System.out.println(test2);
         // ----------
-        // System.out.println(test1.sameContent(test2));
+        System.out.println(test1.sameContent(test2));
         // ----------
-        // System.out.println(test1.sameCoins(test2));
+        System.out.println(test1.sameCoins(test2));
     }
 
 }
