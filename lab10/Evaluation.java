@@ -1,4 +1,4 @@
-public interface Evaluation {
+interface Evaluation {
     public double evaluate();
 
     public char grade(double i);
@@ -62,7 +62,7 @@ class Subject implements Evaluation {
     }
 
     public double evaluate() {
-        double avg =0;
+        double avg = 0;
         for (int studentScore : score) {
             avg += studentScore;
         }
