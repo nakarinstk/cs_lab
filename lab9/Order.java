@@ -25,8 +25,9 @@ public class Order {
         String foo = "";
         System.out.println("Order id : " + this.id);
         System.out.print(this.customer.getName() + " tel : " + this.customer.getTel());
-        if (this.customer.getDiscount() > 0.0) {
-            System.out.println(" discount : " + this.customer.getDiscount());
+        if (this.customer instanceof GoldCustomer) {
+            GoldCustomer gc = (GoldCustomer) customer;
+            System.out.println(" discount : " + gc.getDiscount());
         } else {
             System.out.println('\n');
         }
@@ -40,8 +41,13 @@ public class Order {
 
     public double calculatePayment() {
         double total = 0;
+        double discount = 0;
+        if (customer instanceof GoldCustomer) {
+            GoldCustomer gc = (GoldCustomer) customer;
+            discount = gc.getDiscount();
+        }
         for (Pizza var : pizzaList) {
-            total += var.getPrice() * (1.0 - (customer.getDiscount() / 100.0));
+            total += var.getPrice() * (1.0 - (discount / 100.0));
         }
         return total;
     }

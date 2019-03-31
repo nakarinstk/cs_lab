@@ -18,7 +18,4 @@ public class Customer {
         return this.tel;
     }
 
-    public double getDiscount() {
-        return 0.0;
-    }
 }
